@@ -1,1 +1,7 @@
 <p>login works!</p>
+<button *ngIf="!user && !loader" type="button" (click)="login()">Login</button>
+<div *ngIf="loader">Loading ...</div>
+<div *ngIf="user">
+    Login Success
+    <div>Logged In User {{user.title}}</div>
+</div>
