@@ -13,8 +13,14 @@ export class UsersComponent implements OnInit {
 
   ngOnInit(): void {
     this.userService.getUsers().subscribe((users: any) => {
-      this.users = users.splice(0, 10);
+      this.users = users;
     });
+  }
+
+  addAge() {
+    this.users.forEach(user => {
+      user.age = 12;
+    })
   }
 
 }

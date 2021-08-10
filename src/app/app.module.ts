@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
@@ -23,6 +24,7 @@ import { UsersComponent } from './users/users.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ScrollingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

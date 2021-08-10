@@ -1,18 +1,23 @@
 <p>users works!</p>
-<div *ngFor="let user of users">
-    <div class="card flex-row flex-wrap mb-4">
-        <div class="card-header border-0">
-            <img [src]="user.profile_picture" alt="">
+<button type="button" (click)="addAge()">Add Age</button>
+<cdk-virtual-scroll-viewport itemSize="200" class="viewport">
+    <div *cdkVirtualFor="let user of users">
+    
+        <div class="card flex-row flex-wrap mb-4">
+            <div class="card-header border-0">
+                <img [src]="user.profile_picture" alt="">
+            </div>
+            <div class="card-block px-2">
+                <h4 class="card-title">{{user.first_name}} {{user.last_name}}</h4>
+                <div class="card-text">{{user.email}}</div>
+                <div class="card-text">{{user.gender}}</div>
+                <div class="card-text">{{user.ip_address}}</div>
+                <div class="card-text">{{user.email}}</div>
+                <div class="card-text">{{user.gender}}</div>
+                <div class="card-text">{{user.ip_address}}</div>
+                <div class="card-text">{{user.age}}</div>
+            </div>
+            <div class="w-100"></div>
         </div>
-        <div class="card-block px-2">
-            <h4 class="card-title">{{user.first_name}} {{user.last_name}}</h4>
-            <div class="card-text">{{user.email}}</div>
-            <div class="card-text">{{user.gender}}</div>
-            <div class="card-text">{{user.ip_address}}</div>
-            <div class="card-text">{{user.email}}</div>
-            <div class="card-text">{{user.gender}}</div>
-            <div class="card-text">{{user.ip_address}}</div>
-        </div>
-        <div class="w-100"></div>
     </div>
-</div>
+</cdk-virtual-scroll-viewport>
