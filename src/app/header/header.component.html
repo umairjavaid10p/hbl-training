@@ -1,8 +1,8 @@
-<nav class="navbar navbar-expand-md navbar-light bg-light">
+<nav *ngIf="userLoggedIn" class="navbar navbar-expand-md navbar-light bg-light">
   <div class="container">
     <ul class="nav">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/">
+        <a class="nav-link" routerLink="/home">
           Home
         </a>
       </li>
@@ -12,12 +12,14 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/login">
-          Login
-        </a>
+        <button type="button" (click)="logOut()" class="nav-link btn">
+          LogOut
+        </button>
       </li>
     </ul>
-    <div class="right">Hello {{this.user.name}}</div>
+    <div *ngIf="user" class="right">
+      Hello {{user.first_name}}
+    </div>
   </div>  
 </nav>
 

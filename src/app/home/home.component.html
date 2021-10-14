@@ -1,1 +1,12 @@
-<p>home works!</p>
+<div class="appContainer container">
+    <div class="row">
+        <div *ngIf="user" class="card" style="width: 18rem">
+            <img class="card-img-top" [src]="user.avatar" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{user.first_name}} {{user.last_name}}</h5>
+              <h5 class="card-title">{{user.email}}</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+    </div>
+  </div>

@@ -1,1 +1,15 @@
-<p>products works!</p>
+<div class="appContainer container">
+  <div class="row">
+    <div *ngFor="let product of products" class="col-sm">
+      <div class="card">
+        <img class="card-img-top" src="https://dummyimage.com/286x120/{{product.color}}/000000" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{product.name}}</h5>
+          <h5 class="card-title">{{product.year}}</h5>
+          <h5 class="card-title">{{product.pantone_value}}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
